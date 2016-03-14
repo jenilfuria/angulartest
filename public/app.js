@@ -13,7 +13,10 @@ app.config(function($routeProvider){
         }).when('/users/:id',{
             templateUrl : 'views/userbyid.html',
             controller : 'usersByIdCtrl'
-        })
+        }).when('/posts',{
+            templateUrl : 'views/posts.html',
+            controller : 'postsCtrl'
+        });
 });
 
 
