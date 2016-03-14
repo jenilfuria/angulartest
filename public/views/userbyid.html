@@ -1,0 +1,83 @@
+<div class="container">
+    <h2>User Details</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>User Name</th>
+            <th>Website</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.website}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.company.name}}</td>
+            <td>{{user.address.city}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+<div class="container">
+    <h2>Comments :</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>PostId</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="comment in comments">
+            <td>{{comment.postId}}</td>
+            <td>{{comment.id}}</td>
+            <td>{{comment.name}}</td>
+            <td>{{comment.email}}</td>
+            <td>{{comment.body}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<div class="container">
+    <h2>Todos :</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Completed</th>
+
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="todo in todos">
+            <td>{{todo.userId}}</td>
+            <td>{{todo.id}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.completed}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
