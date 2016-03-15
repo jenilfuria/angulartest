@@ -6,7 +6,11 @@ app.config(function($routeProvider){
     $routeProvider.when('/',{
         templateUrl : 'views/firstpage.html',
         controller : 'firstPageCtrl'
-    }).when('/users',{
+    }).when('/post/new',{
+            templateUrl : 'views/newpost.html',
+            controller : 'newPostCtrl'
+        })
+        .when('/users',{
             templateUrl : 'views/users.html',
             controller : 'usersCtrl'
 
@@ -19,7 +23,7 @@ app.config(function($routeProvider){
         }).when('/post/:id',{
             templateUrl : 'views/postbyid.html',
             controller : 'postByIdCtrl'
-        });
+        })
 });
 
 
