@@ -1,4 +1,6 @@
-app.controller('newPostCtrl', function($scope,$http){
+app.controller('newPostCtrl', function($scope,$http,toaster){
+
+
 
     $scope.submitPost = function(){
         $scope.data = {
@@ -9,10 +11,9 @@ app.controller('newPostCtrl', function($scope,$http){
         return $http.post('http://jsonplaceholder.typicode.com/posts',$scope.data).then(function(data) {
             $scope.newpost = data.data;
             console.log($scope.newpost);
-            alert('saved data :- '+
-                'Title : '+$scope.newpost.title+
-                ','+
-            'Body : '+$scope.newpost.body);
+            toaster.pop('success', "Saved Successfully");
+
         });
     };
+
 });

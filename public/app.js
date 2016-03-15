@@ -1,7 +1,7 @@
-var app = angular.module('AngularTest',['ngRoute']);
-
+var app = angular.module('AngularTest',['ngRoute','toaster', 'ngAnimate']);
 
 app.config(function($routeProvider){
+
 
     $routeProvider.when('/',{
         templateUrl : 'views/firstpage.html',
