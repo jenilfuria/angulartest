@@ -16,6 +16,9 @@ app.config(function($routeProvider){
         }).when('/posts',{
             templateUrl : 'views/posts.html',
             controller : 'postsCtrl'
+        }).when('/post/:id',{
+            templateUrl : 'views/postbyid.html',
+            controller : 'postByIdCtrl'
         });
 });
 
